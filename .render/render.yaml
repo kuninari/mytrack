@@ -11,7 +11,7 @@ services:
       - key: APP_DEBUG
         value: false
       - key: APP_KEY
-        value: あなたが生成した `php artisan key:generate --show` の値
+        value: base64:V8XmKQsgibK56W3EwqiguS75cT6wTehCuc1YuC6frrk=
       - key: APP_URL
         value: https://your-subdomain.onrender.com
       - key: DB_CONNECTION
