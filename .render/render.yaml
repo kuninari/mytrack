@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: mytrack
+    env: ruby # RubyでもNodeでもなんでもOK。無視される。
+    buildCommand: "./.render/build.sh"
+    startCommand: "php artisan serve --host 0.0.0.0 --port 10000"
+    plan: free
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: APP_KEY
+        value: あなたが生成した `php artisan key:generate --show` の値
+      - key: APP_URL
+        value: https://your-subdomain.onrender.com
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: database/database.sqlite
